@@ -1,0 +1,11 @@
+.navbar-bg {
+    background-color: #0B2027;
+    height: 100px;
+    display:flex;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.logo {
+    color: #EDF6F9;
+}

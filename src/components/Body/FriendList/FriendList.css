@@ -1,0 +1,10 @@
+.friend-list {
+    border: 1px solid black;
+    margin: 2rem 0;
+    width: 70%;
+    align-items: center;
+}
+
+.friend-list:last-child {
+    border-bottom: none;
+}
