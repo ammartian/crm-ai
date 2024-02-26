@@ -1,14 +1,10 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import "./Edit.css"
 
-// 1. Create form for the inputs and submit button
-//2. Each input must have onChange={}, function & state to handle the state
-//2a. Add onChange for the input
-//2b. Create function to handle the onChange
-//2c. Create state to handle the value data. Use props as initial value
-//2d. Take the updated data and assign it to the input
-
 function Edit(props){
+
+    const { id } = useParams();
 
     const [title, setTitle] = useState(props.title)
     const [name, setName] = useState(props.name)
@@ -41,6 +37,7 @@ function Edit(props){
 
     return (
         <div className="edit">
+        <h1>User ID: {id}</h1>
         <form>
             <div className="img-title-name">
                 <img className="avatar-img" src={props.imageUrl} alt="avatar" />

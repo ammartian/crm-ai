@@ -20,6 +20,7 @@ function FriendList() {
             {friends.map(friendData => (
                 <Friend 
                     key={friendData.id}
+                    id={friendData.id}
                     imageUrl={friendData.imageUrl}
                     title={friendData.title}
                     name={friendData.name}

@@ -1,7 +1,18 @@
 import React from "react";
+import { Route, Routes, useNavigate} from "react-router-dom";
 import "./Friend.css"
+import Edit from '../Edit/Edit'
 
 function Friend(props) {
+
+    const navigate = useNavigate();
+    const navigateToEdit = (userId) => {
+        navigate(`/edit/${userId}`)
+    }
+
+    function goToEdit() {
+        navigateToEdit(props.id)
+    }
 
     return (
         <div className="col-12 friend">
@@ -13,11 +24,12 @@ function Friend(props) {
                 <h4>{props.name}</h4>
                 <p>{props.date}</p>
             </div>
-            <div className="col-2 action-button">
-                <button className="btn-friend btn-friend-edit">Edit</button>
+            <div className="col-2 action-button">     
+                <button onClick={goToEdit} className="btn-friend btn-friend-edit">Edit</button>
                 <button className="btn-friend btn-friend-delete">Delete</button>
             </div>
         </div>
+
     )
 }
 
